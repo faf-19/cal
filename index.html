@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form name="form1">
+            <input type="text" name="answer" id="calc" placeholder="0"><br><br>
+ <input type="button" value="C" id="clear" class="num" onclick="form1.answer.value =''"> <br>
+ <div class="main">
+    <input type="button" value="7" class="num" onclick="form1.answer.value +='7'"> 
+            <input type="button" value="8" class="num" onclick="form1.answer.value +='8'"> 
+            <input type="button" value="9" class="num" onclick="form1.answer.value +='9'"> 
+            <input type="button" value="÷" class="num" onclick="form1.answer.value +='/'" style="background-color: orange;"> <br>
+            <input type="button" value="4" class="num" onclick="form1.answer.value +='4'"> 
+            <input type="button" value="5" class="num" onclick="form1.answer.value +='5'"> 
+            <input type="button" value="6" class="num" onclick="form1.answer.value +='6'"> 
+            <input type="button" value="x" class="num" onclick="form1.answer.value +='*'" style="background-color: orange;"> <br>
+            <input type="button" value="1" class="num" onclick="form1.answer.value +='1'"> 
+            <input type="button" value="2" class="num" onclick="form1.answer.value +='2'"> 
+            <input type="button" value="3" class="num" onclick="form1.answer.value +='3'"> 
+            <input type="button" value="-" class="num" onclick="form1.answer.value +='-'" style="background-color: orange;"> <br>
+            <input type="button" value="0" class="num" onclick="form1.answer.value +='0'"> 
+            <input type="button" value="." class="num" onclick="form1.answer.value +='.'"> 
+            <input type="button" value="=" class="num" onclick="calculate()" style="background-color: rgb(17, 179, 17);"> 
+            <input type="button" value="+" class="num" onclick="form1.answer.value +='+'" style="background-color: orange;"> 
+ </div>
+            
+
+    </form>
+
+
+<script>
+    function calculate(){
+        form1.answer.value = eval(form1.answer.value)
+    }
+</script>
+
+</body>
+</html>
