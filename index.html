@@ -34,9 +34,20 @@
 
 
 <script>
-    function calculate(){
-        form1.answer.value = eval(form1.answer.value)
+   function calculate() {
+    const expression = form1.answer.value;
+    try {
+        const result = eval(expression);
+        if (result === Infinity || isNaN(result)) {
+            form1.answer.value = "Invalid";
+        } else {
+            form1.answer.value = result;
+        }
+    } catch (error) {
+        form1.answer.value = "Error";
     }
+}
+
 </script>
 
 </body>
